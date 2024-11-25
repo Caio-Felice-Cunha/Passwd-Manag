@@ -58,11 +58,8 @@ class FernetHasher:
         try:
             return self.fernet.decrypt(value).decode()
         except InvalidToken as e:
-            return 'Token Invalido'
+            return 'Invalid Token'
         
     
-fernet_caio = FernetHasher('TanI4OFkeLdhOtEJfwnEbIi+IogsUr22mAsm7wZMkgw=')
-print(fernet_caio.decrypt('gAAAAABnJBrlB8P3WbxEJorQMOhlOLRDjOqSB3l0gYT8kdYO-GoBqL9PmQjGGy8mdBpW4fnsWjD9UJFcONxqlK97eZDnm7Abcw=='))
-
-
-
+# fernet_caio = FernetHasher('TanI4OFkeLdhOtEJfwnEbIi+IogsUr22mAsm7wZMkgw=')
+# print(fernet_caio.decrypt('gAAAAABnJBrlB8P3WbxEJorQMOhlOLRDjOqSB3l0gYT8kdYO-GoBqL9PmQjGGy8mdBpW4fnsWjD9UJFcONxqlK97eZDnm7Abcw=='))
